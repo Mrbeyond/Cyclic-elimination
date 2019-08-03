@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="puxer(100)">
+	<p id="show"></p>
+
+</body>
+<script type="text/javascript">
+
+	function puxer (num) {
+		var arr = [];
+		for (var i = 1; i <= num; i++) {
+		 	arr.push(i);
+		}
+		var m = 0;		
+		while(arr.length > 1){			
+			if (m === arr.length){
+				m = 0;
+			}
+			if((m+1) === arr.length){
+				m = (-1);
+			}
+			arr.splice((m+1),1);		
+			m++;
+		}
+		alert(arr);
+	}
+	
+</script>
+</html>
